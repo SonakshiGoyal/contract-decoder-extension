@@ -1,0 +1,59 @@
+# =========================
+# General
+# =========================
+node_modules/
+dist/
+build/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# VSCode / Editors
+# =========================
+.vscode/
+.idea/
+*.code-workspace
+
+# =========================
+# OS-specific
+# =========================
+ehthumbs.db
+Icon?
+__MACOSX/
+
+# =========================
+# Chrome Extension Specific
+# =========================
+# Output of packaging or build steps
+*.crx
+*.pem
+*.zip
+
+# =========================
+# Testing / Coverage
+# =========================
+coverage/
+jest-cache/
+jest-html-reporters-*
+.nyc_output/
+
+# =========================
+# Miscellaneous
+# =========================
+package-lock.json
+yarn.lock
+*.iml
