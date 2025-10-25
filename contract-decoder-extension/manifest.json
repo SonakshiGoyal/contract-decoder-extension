@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Contract Decoder",
+  "name": "Contract Decoder", 
   "version": "0.1.0",
   "description": "Minimal starter for Contract Decoder Chrome Extension.",
   "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
@@ -9,10 +9,15 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icons/icon128.png"
+    "default_popup": "popup.html"
   },
   "icons": {
-    "128": "icons/icon128.png"
-  }
+  },
+  "content_scripts":[
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at":"document_idle"
+    }
+  ]
 }
