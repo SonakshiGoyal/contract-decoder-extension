@@ -3,8 +3,16 @@
   "name": "Contract Decoder", 
   "version": "0.1.0",
   "description": "Minimal starter for Contract Decoder Chrome Extension.",
-  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://generativelanguage.googleapis.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -16,7 +24,7 @@
   "content_scripts":[
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "js": ["modelApi/config.js", "modelApi/googleAI.js", "content.js"],
       "run_at":"document_idle"
     }
   ]
